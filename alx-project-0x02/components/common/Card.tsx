@@ -1,4 +1,5 @@
-import { CardProps } from "@/interfaces";   
+import { type CardProps } from "../../interfaces";
+   
 
 export function Card({ title, content }: CardProps) {
     return (
