@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { PostModal } from "@/components/common/PostModal";
 import Card from "@/components/common/Card";
+import Header from "../components/layout/Header";
+
 
 export default function Home() {
 
@@ -17,6 +19,7 @@ export default function Home() {
 
   return (
     <div className="p-8">
+        <Header />
       <h1>Welcome to the Home Page</h1>
       <p>This is the main landing page of the application.</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">

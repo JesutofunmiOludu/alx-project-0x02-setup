@@ -5,7 +5,8 @@ export default function Header() {
         <header className="bg-gray-800 text-white p-4">
             <nav className="container mx-auto flex justify-between">
                 <Link href="/home" className="text-lg font-bold">  Home </Link>
-                <Link href="/about" className="text-lg font-bold"> Abot </Link>
+                <Link href="/about" className="text-lg font-bold"> About </Link>
+                <Link href="/post" className="text-lg font-bold"> Post </Link>
             </nav>
         </header>
     );
