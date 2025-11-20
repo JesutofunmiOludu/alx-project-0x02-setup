@@ -2,17 +2,20 @@ import { useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
 import { PostProps } from "@/interfaces";
 
+export async function getStaticProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await res.json();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+
 export default function Post() {
     return (
-
-    const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    // Fetch sample posts from JSONPlaceholder API
-    fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
-      .then((res) => res.json())
-      .then((data) => setPosts(data));
-  }, []);
 
 
         <div className="p-6">
