@@ -8,3 +8,10 @@ export interface ButtonProps {
   label: string;
   onClick: () => void;
 }
+
+export interface PostProps {
+  id: number;
+  title: string;
+  body: string;
+  userId: number;
+}
