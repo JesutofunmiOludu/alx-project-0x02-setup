@@ -1,6 +1,20 @@
+
+import { useState } from "react";
+import { PostModal } from "@/components/common/PostModal";
 import Card from "@/components/common/Card";
 
 export default function Home() {
+
+    const [posts, setPosts] = useState<
+    { title: string; content: string }[]
+  >([]);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleAddPost = (title: string, content: string) => {
+    setPosts([...posts, { title, content }]);
+  };
+
   return (
     <div className="p-8">
       <h1>Welcome to the Home Page</h1>
@@ -21,7 +35,32 @@ export default function Home() {
 
       </div>
     
-     
+     <div className="p-6">
+      <h1 className="text-3xl font-bold mb-6">Home Page</h1>
+
+      <button
+        onClick={() => setIsOpen(true)}
+        className="mb-6 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+      >
+        Add New Post
+      </button>
+
+      {isOpen && (
+        <PostModal
+          onSubmit={handleAddPost}
+          onClose={() => setIsOpen(false)}
+        />
+      )}
+
+      <div className="space-y-4">
+        {posts.map((post, index) => (
+          <Card key={index} title={post.title} content={post.content} />
+        ))}
       </div>
+    </div>
+
+      </div>
+
+      
   );
 }
