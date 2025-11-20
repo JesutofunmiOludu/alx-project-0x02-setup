@@ -6,7 +6,7 @@ export default function Header() {
             <nav className="container mx-auto flex justify-between">
                 <Link href="/home" className="text-lg font-bold">  Home </Link>
                 <Link href="/about" className="text-lg font-bold"> About </Link>
-                <Link href="/post" className="text-lg font-bold"> Post </Link>
+                <Link href="/posts" className="text-lg font-bold"> Post </Link>
             </nav>
         </header>
     );
