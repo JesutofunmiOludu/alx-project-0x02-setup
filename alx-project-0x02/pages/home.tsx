@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { PostModal } from "@/components/common/PostModal";
 import Card from "@/components/common/Card";
-import Header from "../components/layout/Header";
+import Header from "@/components/layout/Header";
 
 
 export default function Home() {

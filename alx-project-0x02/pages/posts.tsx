@@ -1,4 +1,4 @@
-import Header from "../components/layout/Header";
+import Header from "@/components/layout/Header";
 export default function Post() {
     return (
         <div className="p-6">
