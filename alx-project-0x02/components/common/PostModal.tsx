@@ -2,7 +2,7 @@ import { on } from "events";
 import { title } from "process";
 import { useState} from "react";
 
-export default function PostModalProps() {
+interface PostModalProps {
     onSubmit : (title: string, content: string) => void;
     onClose : () => void;
 }
